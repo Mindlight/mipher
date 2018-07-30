@@ -455,7 +455,7 @@ export class Random {
     if (typeof process !== 'undefined' && typeof process.pid === 'number') {
       // running on node
       try {
-        let crypto = require('crypto');
+        let crypto = require('react-native-crypto');
         let rnd = crypto.randomBytes(128);
         this.addRandomEvent(rnd, this.robin.rnd, 1024);
         this.robin.rnd = ++this.robin.rnd % this.NUM_POOLS;
